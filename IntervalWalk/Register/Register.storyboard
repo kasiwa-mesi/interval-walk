@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -181,6 +182,14 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="fMR-eD-trW" secondAttribute="bottom" id="kLz-Ig-Gz6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="aAo-g3-Io1" id="51h-2p-9mn"/>
+                        <outlet property="moveLoginScreenButton" destination="E5H-gU-D23" id="pLP-2D-dNu"/>
+                        <outlet property="moveTrialButton" destination="FMu-gy-dNz" id="DBR-Kw-YgQ"/>
+                        <outlet property="passwordTextField" destination="b64-L1-Glr" id="bBl-E6-emQ"/>
+                        <outlet property="reconfirmPasswordTextField" destination="eMK-pP-ftp" id="6gp-15-iSa"/>
+                        <outlet property="registerButton" destination="TPi-RE-jyT" id="bSI-OF-Gl9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

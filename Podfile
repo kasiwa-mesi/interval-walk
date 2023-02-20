@@ -11,5 +11,6 @@ target 'IntervalWalk' do
   pod 'FirebaseFirestore'
   pod 'FirebaseFirestoreSwift'
   pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift'
   pod 'SwiftDate'
 end

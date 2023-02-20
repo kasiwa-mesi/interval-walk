@@ -15,6 +15,8 @@ final class Router {
     
     func showRoot(window: UIWindow?) {
         let vc = RegisterViewController.makeFromStoryboard()
+        let presenter = RegisterPresenter(output: vc)
+        vc.inject(presenter: presenter)
         self.pushNavigate(vc: vc, window: window)
     }
 }

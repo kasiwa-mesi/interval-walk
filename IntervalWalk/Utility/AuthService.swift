@@ -12,8 +12,26 @@ final class AuthService {
     static let shared: AuthService = .init()
     private init() {}
     
+    func getCurrentUser() -> User? { Auth.auth().currentUser }
+    
+    func setLanguageCode(code: String) {
+        Auth.auth().languageCode = code
+    }
+    
     func createUser(email: String, password: String, completionHandler: @escaping (NSError?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let authError = error as NSError? {
+                completionHandler(authError)
+                return
+            }
+            completionHandler(nil)
+        }
+    }
+    
+    func sendEmailVerification(completionHandler: @escaping (NSError?) -> Void) {
+        let user = getCurrentUser()
+        // メールが送れなかった場合のエラーハンドリングを記述
+        user?.sendEmailVerification { error in
             if let authError = error as NSError? {
                 completionHandler(authError)
                 return

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2720204229A2FCA6002C5DFF /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720204129A2FCA6002C5DFF /* RegisterPresenter.swift */; };
+		2720204529A30922002C5DFF /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720204429A30922002C5DFF /* UIViewController+.swift */; };
+		2720204729A30940002C5DFF /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720204629A30940002C5DFF /* String+.swift */; };
+		2720204929A30C5C002C5DFF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720204829A30C5C002C5DFF /* Validator.swift */; };
+		2720204B29A35241002C5DFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2720204A29A35241002C5DFF /* GoogleService-Info.plist */; };
 		2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722583B29A09F18003178E4 /* AppDelegate.swift */; };
 		2722584529A09F19003178E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2722584429A09F19003178E4 /* Assets.xcassets */; };
 		2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2722584629A09F19003178E4 /* LaunchScreen.storyboard */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2720204129A2FCA6002C5DFF /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		2720204429A30922002C5DFF /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		2720204629A30940002C5DFF /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		2720204829A30C5C002C5DFF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		2720204A29A35241002C5DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2722583829A09F18003178E4 /* IntervalWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntervalWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2722583B29A09F18003178E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2722584429A09F19003178E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2720204029A2FC6C002C5DFF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2720204129A2FCA6002C5DFF /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2720204329A30900002C5DFF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2720204429A30922002C5DFF /* UIViewController+.swift */,
+				2720204629A30940002C5DFF /* String+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		2722582F29A09F18003178E4 = {
 			isa = PBXGroup;
 			children = (
@@ -65,12 +92,14 @@
 		2722583A29A09F18003178E4 /* IntervalWalk */ = {
 			isa = PBXGroup;
 			children = (
+				2720204329A30900002C5DFF /* Extension */,
 				27274DEA29A1D4A600F025B4 /* Utility */,
 				27274DE329A1AAD700F025B4 /* Register */,
 				27274DE029A1AA9F00F025B4 /* Router */,
 				2722583B29A09F18003178E4 /* AppDelegate.swift */,
 				2722584429A09F19003178E4 /* Assets.xcassets */,
 				2722584629A09F19003178E4 /* LaunchScreen.storyboard */,
+				2720204A29A35241002C5DFF /* GoogleService-Info.plist */,
 				2722584929A09F19003178E4 /* Info.plist */,
 			);
 			path = IntervalWalk;
@@ -87,7 +116,7 @@
 		27274DE329A1AAD700F025B4 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				27274DE529A1AAF700F025B4 /* ViewModel */,
+				2720204029A2FC6C002C5DFF /* Presenter */,
 				27274DE429A1AAF000F025B4 /* ViewController */,
 				27274DE829A1AB5F00F025B4 /* Register.storyboard */,
 			);
@@ -102,17 +131,11 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		27274DE529A1AAF700F025B4 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		27274DEA29A1D4A600F025B4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				27274DEB29A1D4BC00F025B4 /* AuthService.swift */,
+				2720204829A30C5C002C5DFF /* Validator.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -194,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2720204B29A35241002C5DFF /* GoogleService-Info.plist in Resources */,
 				2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */,
 				2722584529A09F19003178E4 /* Assets.xcassets in Resources */,
 				27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */,
@@ -249,9 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2720204929A30C5C002C5DFF /* Validator.swift in Sources */,
+				2720204229A2FCA6002C5DFF /* RegisterPresenter.swift in Sources */,
 				27274DE229A1AAB600F025B4 /* Router.swift in Sources */,
+				2720204529A30922002C5DFF /* UIViewController+.swift in Sources */,
 				2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */,
 				27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */,
+				2720204729A30940002C5DFF /* String+.swift in Sources */,
 				27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +433,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kasiwa.IntervalWalk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kasiwa.IntervalWalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -434,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kasiwa.IntervalWalk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kasiwa.IntervalWalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
