@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2720204229A2FCA6002C5DFF /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720204129A2FCA6002C5DFF /* RegisterPresenter.swift */; };
+		2720204529A30922002C5DFF /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720204429A30922002C5DFF /* UIViewController+.swift */; };
+		2720204729A30940002C5DFF /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720204629A30940002C5DFF /* String+.swift */; };
+		2720204929A30C5C002C5DFF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720204829A30C5C002C5DFF /* Validator.swift */; };
+		2720204B29A35241002C5DFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2720204A29A35241002C5DFF /* GoogleService-Info.plist */; };
 		2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722583B29A09F18003178E4 /* AppDelegate.swift */; };
 		2722584529A09F19003178E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2722584429A09F19003178E4 /* Assets.xcassets */; };
 		2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2722584629A09F19003178E4 /* LaunchScreen.storyboard */; };
 		27274DE229A1AAB600F025B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE129A1AAB600F025B4 /* Router.swift */; };
 		27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */; };
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
+		27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DEB29A1D4BC00F025B4 /* AuthService.swift */; };
+		A22FBB55A91E4D9CB12D72F1 /* Pods_IntervalWalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE334D8206F4AB110D39D9F /* Pods_IntervalWalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2720204129A2FCA6002C5DFF /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		2720204429A30922002C5DFF /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		2720204629A30940002C5DFF /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		2720204829A30C5C002C5DFF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		2720204A29A35241002C5DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2722583829A09F18003178E4 /* IntervalWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntervalWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2722583B29A09F18003178E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2722584429A09F19003178E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +36,10 @@
 		27274DE129A1AAB600F025B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		27274DEB29A1D4BC00F025B4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4DE334D8206F4AB110D39D9F /* Pods_IntervalWalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntervalWalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC74FE14CEF966989D6D024D /* Pods-IntervalWalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntervalWalk.debug.xcconfig"; path = "Target Support Files/Pods-IntervalWalk/Pods-IntervalWalk.debug.xcconfig"; sourceTree = "<group>"; };
+		F7576817779688F5CCF36E59 /* Pods-IntervalWalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntervalWalk.release.xcconfig"; path = "Target Support Files/Pods-IntervalWalk/Pods-IntervalWalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22FBB55A91E4D9CB12D72F1 /* Pods_IntervalWalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2720204029A2FC6C002C5DFF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2720204129A2FCA6002C5DFF /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2720204329A30900002C5DFF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2720204429A30922002C5DFF /* UIViewController+.swift */,
+				2720204629A30940002C5DFF /* String+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		2722582F29A09F18003178E4 = {
 			isa = PBXGroup;
 			children = (
 				2722583A29A09F18003178E4 /* IntervalWalk */,
 				2722583929A09F18003178E4 /* Products */,
+				CA1651AD74DDF927F9A2D052 /* Pods */,
+				88EAF520EAACF6C4875D6467 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,11 +92,14 @@
 		2722583A29A09F18003178E4 /* IntervalWalk */ = {
 			isa = PBXGroup;
 			children = (
+				2720204329A30900002C5DFF /* Extension */,
+				27274DEA29A1D4A600F025B4 /* Utility */,
 				27274DE329A1AAD700F025B4 /* Register */,
 				27274DE029A1AA9F00F025B4 /* Router */,
 				2722583B29A09F18003178E4 /* AppDelegate.swift */,
 				2722584429A09F19003178E4 /* Assets.xcassets */,
 				2722584629A09F19003178E4 /* LaunchScreen.storyboard */,
+				2720204A29A35241002C5DFF /* GoogleService-Info.plist */,
 				2722584929A09F19003178E4 /* Info.plist */,
 			);
 			path = IntervalWalk;
@@ -77,7 +116,7 @@
 		27274DE329A1AAD700F025B4 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				27274DE529A1AAF700F025B4 /* ViewModel */,
+				2720204029A2FC6C002C5DFF /* Presenter */,
 				27274DE429A1AAF000F025B4 /* ViewController */,
 				27274DE829A1AB5F00F025B4 /* Register.storyboard */,
 			);
@@ -92,11 +131,30 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		27274DE529A1AAF700F025B4 /* ViewModel */ = {
+		27274DEA29A1D4A600F025B4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				27274DEB29A1D4BC00F025B4 /* AuthService.swift */,
+				2720204829A30C5C002C5DFF /* Validator.swift */,
 			);
-			path = ViewModel;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		88EAF520EAACF6C4875D6467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DE334D8206F4AB110D39D9F /* Pods_IntervalWalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA1651AD74DDF927F9A2D052 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC74FE14CEF966989D6D024D /* Pods-IntervalWalk.debug.xcconfig */,
+				F7576817779688F5CCF36E59 /* Pods-IntervalWalk.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2722584C29A09F19003178E4 /* Build configuration list for PBXNativeTarget "IntervalWalk" */;
 			buildPhases = (
+				E78333A1F65A22FCC3EB9ACB /* [CP] Check Pods Manifest.lock */,
 				2722583429A09F18003178E4 /* Sources */,
 				2722583529A09F18003178E4 /* Frameworks */,
 				2722583629A09F18003178E4 /* Resources */,
+				E86AB6364E5E46A191E3CD50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2720204B29A35241002C5DFF /* GoogleService-Info.plist in Resources */,
 				2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */,
 				2722584529A09F19003178E4 /* Assets.xcassets in Resources */,
 				27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */,
@@ -165,14 +226,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E78333A1F65A22FCC3EB9ACB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntervalWalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E86AB6364E5E46A191E3CD50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntervalWalk/Pods-IntervalWalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntervalWalk/Pods-IntervalWalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IntervalWalk/Pods-IntervalWalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2722583429A09F18003178E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2720204929A30C5C002C5DFF /* Validator.swift in Sources */,
+				2720204229A2FCA6002C5DFF /* RegisterPresenter.swift in Sources */,
 				27274DE229A1AAB600F025B4 /* Router.swift in Sources */,
+				2720204529A30922002C5DFF /* UIViewController+.swift in Sources */,
 				2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */,
 				27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */,
+				2720204729A30940002C5DFF /* String+.swift in Sources */,
+				27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -294,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -306,6 +414,7 @@
 		};
 		2722584D29A09F19003178E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC74FE14CEF966989D6D024D /* Pods-IntervalWalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,7 +433,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kasiwa.IntervalWalk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kasiwa.IntervalWalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -334,6 +443,7 @@
 		};
 		2722584E29A09F19003178E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7576817779688F5CCF36E59 /* Pods-IntervalWalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -352,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kasiwa.IntervalWalk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kasiwa.IntervalWalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
