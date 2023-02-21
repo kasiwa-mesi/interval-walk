@@ -19,6 +19,20 @@ final class Router {
         vc.inject(presenter: presenter)
         self.pushNavigate(vc: vc, window: window)
     }
+    
+    func showRegister(from: UIViewController) {
+        let vc = RegisterViewController.makeFromStoryboard()
+        let presenter = RegisterPresenter(output: vc)
+        vc.inject(presenter: presenter)
+        self.pushNavigate(vc: vc, window: window)
+    }
+    
+    func showLogin(from: UIViewController) {
+        let vc = LoginViewController.makeFromStoryboard()
+        let presenter = LoginPresenter(output: vc)
+        vc.inject(presenter: presenter)
+        self.pushNavigate(vc: vc, window: window)
+    }
 }
 
 private extension Router {

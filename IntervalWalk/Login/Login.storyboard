@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="IntervalWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,13 +24,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="571"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログイン画面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyw-Ul-xaD">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="283"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="211"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-rh-ipj">
-                                                <rect key="frame" x="0.0" y="315" width="343" height="72"/>
+                                                <rect key="frame" x="0.0" y="243" width="343" height="72"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-yq-bjM" userLabel="Email Field">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="72"/>
@@ -41,7 +41,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sU-Os-eHG">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sU-Os-eHG" userLabel="Email Text Field">
                                                                 <rect key="frame" x="0.0" y="36" width="343" height="36"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="UaN-fX-VfS"/>
@@ -61,7 +61,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHp-FX-WcU">
-                                                <rect key="frame" x="0.0" y="419" width="343" height="72"/>
+                                                <rect key="frame" x="0.0" y="347" width="343" height="72"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vi8-4x-FBK" userLabel="Password Field">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="72"/>
@@ -72,7 +72,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-XN-ggB">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-XN-ggB" userLabel="Password Text Field">
                                                                 <rect key="frame" x="0.0" y="36" width="343" height="36"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="2Dr-uw-M5J"/>
@@ -91,16 +91,40 @@
                                                     <constraint firstAttribute="bottom" secondItem="Vi8-4x-FBK" secondAttribute="bottom" id="jOM-Yx-80M"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz0-VW-3Y0" userLabel="Login Button">
-                                                <rect key="frame" x="0.0" y="523" width="343" height="48"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSr-aB-Xdv">
+                                                <rect key="frame" x="0.0" y="451" width="343" height="120"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HDv-A4-IDs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz0-VW-3Y0" userLabel="Login Button">
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="72.333333333333329"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="ログイン">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUv-I2-ecW" userLabel="Move Register Screen Button">
+                                                                <rect key="frame" x="0.0" y="72.333333333333371" width="343" height="47.666666666666657"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="会員登録画面に移動">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="eDz-7h-WgL"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="8LM-So-Pe0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HDv-A4-IDs" secondAttribute="bottom" id="4Cg-s2-TEG"/>
+                                                    <constraint firstItem="HDv-A4-IDs" firstAttribute="top" secondItem="pSr-aB-Xdv" secondAttribute="top" id="Tv2-q5-HmQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HDv-A4-IDs" secondAttribute="trailing" id="sT8-KN-QM0"/>
+                                                    <constraint firstItem="HDv-A4-IDs" firstAttribute="leading" secondItem="pSr-aB-Xdv" secondAttribute="leading" id="ym6-0M-xgA"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="ログイン">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -122,6 +146,12 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0C7-BA-6nb" secondAttribute="trailing" constant="16" id="at2-1Q-0r2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="9sU-Os-eHG" id="ZUc-UN-pRF"/>
+                        <outlet property="loginButton" destination="gz0-VW-3Y0" id="r2y-cE-l0F"/>
+                        <outlet property="moveRegisterButton" destination="lUv-I2-ecW" id="YsH-Wa-4Hs"/>
+                        <outlet property="passwordTextField" destination="jCi-XN-ggB" id="iRJ-nl-icr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
