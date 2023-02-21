@@ -7,7 +7,6 @@
 
 import Foundation
 
-// 出力に関するprotocol
 
 protocol RegisterPresenterInput {
     func showErrorAlert(error: NSError?)

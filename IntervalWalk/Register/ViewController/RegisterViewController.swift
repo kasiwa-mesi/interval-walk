@@ -53,7 +53,7 @@ final class RegisterViewController: UIViewController {
 
 @objc private extension RegisterViewController {
     func tapMoveLoginScreenButton() {
-        // Routerでログイン画面に遷移
+        Router.shared.showLogin(from: self)
     }
     
     func tapRegisterButton() {
@@ -61,12 +61,10 @@ final class RegisterViewController: UIViewController {
         let password = passwordTextField.text ?? ""
         let reconfirmPassword = reconfirmPasswordTextField.text ?? ""
         
-        // presenterで登録処理を実装
         presenter.createUser(email: email, password: password, reconfirmPassword: reconfirmPassword)
     }
     
     func tapMoveTrialButton() {
-        // Routerでトライアル画面に遷移
     }
 }
 
