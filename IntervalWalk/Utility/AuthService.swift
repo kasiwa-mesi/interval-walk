@@ -18,6 +18,12 @@ final class AuthService {
         Auth.auth().languageCode = code
     }
     
+    func isLogined(completionHandler: @escaping (Bool) -> Void) {
+        Auth.auth().addStateDidChangeListener({ auth, user in
+            completionHandler(user != nil)
+        })
+    }
+    
     func createUser(email: String, password: String, completionHandler: @escaping (NSError?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let authError = error as NSError? {

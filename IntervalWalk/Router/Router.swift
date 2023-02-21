@@ -14,10 +14,17 @@ final class Router {
     private var window: UIWindow?
     
     func showRoot(window: UIWindow?) {
-        let vc = RegisterViewController.makeFromStoryboard()
-        let presenter = RegisterPresenter(output: vc)
-        vc.inject(presenter: presenter)
-        self.pushNavigate(vc: vc, window: window)
+        AuthService.shared.isLogined { (hasAuthentication) in
+            if hasAuthentication {
+                let vc = HomeViewController.makeFromStoryboard()
+                self.pushNavigate(vc: vc, window: window)
+            } else {
+                let vc = RegisterViewController.makeFromStoryboard()
+                let presenter = RegisterPresenter(output: vc)
+                vc.inject(presenter: presenter)
+                self.pushNavigate(vc: vc, window: window)
+            }
+        }
     }
     
     func showRegister(from: UIViewController) {
