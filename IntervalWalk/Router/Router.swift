@@ -17,6 +17,8 @@ final class Router {
         AuthService.shared.isLogined { (hasAuthentication) in
             if hasAuthentication {
                 let vc = HomeViewController.makeFromStoryboard()
+                let presenter = HomePresenter(output: vc)
+                vc.inject(presenter: presenter)
                 self.pushNavigate(vc: vc, window: window)
             } else {
                 let vc = RegisterViewController.makeFromStoryboard()

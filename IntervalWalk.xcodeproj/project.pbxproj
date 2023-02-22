@@ -15,6 +15,7 @@
 		2721951029A5DAB500B9D4D5 /* SetEmailChangedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721950F29A5DAB500B9D4D5 /* SetEmailChangedPresenter.swift */; };
 		2721951229A5DAC700B9D4D5 /* SetEmailChangedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721951129A5DAC700B9D4D5 /* SetEmailChangedViewController.swift */; };
 		2721951429A5DADE00B9D4D5 /* SetEmailChanged.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2721951329A5DADE00B9D4D5 /* SetEmailChanged.storyboard */; };
+		2721951629A61A3800B9D4D5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721951529A61A3800B9D4D5 /* HomePresenter.swift */; };
 		2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722583B29A09F18003178E4 /* AppDelegate.swift */; };
 		2722584529A09F19003178E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2722584429A09F19003178E4 /* Assets.xcassets */; };
 		2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2722584629A09F19003178E4 /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 		2721950F29A5DAB500B9D4D5 /* SetEmailChangedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEmailChangedPresenter.swift; sourceTree = "<group>"; };
 		2721951129A5DAC700B9D4D5 /* SetEmailChangedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEmailChangedViewController.swift; sourceTree = "<group>"; };
 		2721951329A5DADE00B9D4D5 /* SetEmailChanged.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetEmailChanged.storyboard; sourceTree = "<group>"; };
+		2721951529A61A3800B9D4D5 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		2722583829A09F18003178E4 /* IntervalWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntervalWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2722583B29A09F18003178E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2722584429A09F19003178E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		2724360929A4A1BA0050CD6D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				2721951529A61A3800B9D4D5 /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				2720204729A30940002C5DFF /* String+.swift in Sources */,
 				27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */,
 				2724361429A508A10050CD6D /* SetPasswordChangedPresenter.swift in Sources */,
+				2721951629A61A3800B9D4D5 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
