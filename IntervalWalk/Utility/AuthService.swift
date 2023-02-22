@@ -14,6 +14,8 @@ final class AuthService {
     
     func getCurrentUser() -> User? { Auth.auth().currentUser }
     
+    func getCurrentUserEmail() -> String? { Auth.auth().currentUser?.email }
+    
     func setLanguageCode(code: String) {
         Auth.auth().languageCode = code
     }
@@ -48,6 +50,16 @@ final class AuthService {
     
     func signIn(email: String, password: String, completionHandler: @escaping (NSError?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let authError = error as NSError? {
+                completionHandler(authError)
+                return
+            }
+            completionHandler(nil)
+        }
+    }
+    
+    func sendPasswordReset(email: String, completionHandler: @escaping (NSError?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let authError = error as NSError? {
                 completionHandler(authError)
                 return

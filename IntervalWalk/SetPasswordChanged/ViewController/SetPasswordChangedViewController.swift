@@ -8,11 +8,16 @@
 import UIKit
 
 final class SetPasswordChangedViewController: UIViewController {
-    @IBOutlet private weak userEmailLabel: UILabel!
-    @IBOutlet private weak setPasswordChangedButton: UIButton! {
+    @IBOutlet private weak var userEmailLabel: UILabel!
+    @IBOutlet private weak var setPasswordChangedButton: UIButton! {
         didSet {
             setPasswordChangedButton.addTarget(self, action: #selector(tapPasswordChangeButton), for: .touchUpInside)
         }
+    }
+    
+    private var presenter: SetPasswordChangedPresenterInput!
+    func inject(presenter: SetPasswordChangedPresenterInput) {
+      self.presenter = presenter
     }
     
     override func viewDidLoad() {
@@ -29,6 +34,14 @@ final class SetPasswordChangedViewController: UIViewController {
 
 @objc private extension SetPasswordChangedViewController {
     func tapPasswordChangeButton() {
-        // Presenterでパスワードリセットの処理を実装
+        presenter.passwordReset()
+    }
+}
+
+extension SetPasswordChangedViewController: SetPasswordChangedPresenterOutput {
+    func showErrorAlert(code: String, message: String) {
+        let gotItAction = UIAlertAction(title: String.ok, style: .default)
+        let errorTitle = String.errorTitle + code
+        self.showAlert(title: errorTitle, message: message, actions: [gotItAction])
     }
 }

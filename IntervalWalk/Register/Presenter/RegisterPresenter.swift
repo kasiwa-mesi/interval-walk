@@ -20,7 +20,6 @@ protocol RegisterPresenterOutput: AnyObject {
 
 final class RegisterPresenter {
     private var output: RegisterPresenterOutput!
-    // このoutputがViewControllerのこと
     init(output: RegisterPresenterOutput) {
         self.output = output
     }
