@@ -40,6 +40,10 @@ final class Router {
         vc.inject(presenter: presenter)
         self.pushNavigate(vc: vc, window: window)
     }
+    
+    func showReStart() {
+        self.showRoot(window: self.window)
+    }
 }
 
 private extension Router {
