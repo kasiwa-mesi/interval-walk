@@ -122,6 +122,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="k5M-Lm-3Tx" secondAttribute="bottom" id="ppJ-aa-4y4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="prx-Cm-Xil" id="Drw-PI-wnX"/>
+                        <outlet property="passwordTextField" destination="4ec-Pn-TBH" id="v4A-j3-j4T"/>
+                        <outlet property="setEmailChangedButton" destination="eUf-Yr-V2S" id="Erk-PG-Z4R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
