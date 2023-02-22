@@ -13,13 +13,13 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet private weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var loginButton: UIButton! {
+    @IBOutlet private weak var loginButton: UIButton! {
         didSet {
             loginButton.addTarget(self, action: #selector(tapLoginButton), for: .touchUpInside)
         }
     }
     
-    @IBOutlet weak var moveRegisterButton: UIButton! {
+    @IBOutlet private weak var moveRegisterButton: UIButton! {
         didSet {
             moveRegisterButton.addTarget(self, action: #selector(tapMoveRegisterButton), for: .touchUpInside)
         }

@@ -16,6 +16,10 @@ final class AuthService {
     
     func getCurrentUserEmail() -> String? { Auth.auth().currentUser?.email }
     
+    func getCredential(email: String, password: String) -> AuthCredential {
+        EmailAuthProvider.credential(withEmail: email, password: password)
+    }
+    
     func setLanguageCode(code: String) {
         Auth.auth().languageCode = code
     }
@@ -58,8 +62,40 @@ final class AuthService {
         }
     }
     
+    func signOut(completionHandler: @escaping (NSError?) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completionHandler(nil)
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+            completionHandler(signOutError)
+        }
+    }
+    
     func sendPasswordReset(email: String, completionHandler: @escaping (NSError?) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let authError = error as NSError? {
+                completionHandler(authError)
+                return
+            }
+            completionHandler(nil)
+        }
+    }
+    
+    func updateEmail(email: String, completionHandler: @escaping (NSError?) -> Void) {
+        let user = getCurrentUser()
+        user?.updateEmail(to: email) { error in
+            if let authError = error as NSError? {
+                completionHandler(authError)
+                return
+            }
+            completionHandler(nil)
+        }
+    }
+    
+    func reAuthenticate(credential: AuthCredential, completionHandler: @escaping (NSError?) -> Void) {
+        let user = Auth.auth().currentUser
+        user?.reauthenticate(with: credential) { authResult, error in
             if let authError = error as NSError? {
                 completionHandler(authError)
                 return
