@@ -9,6 +9,8 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     private var signOutButtonItem: UIBarButtonItem!
+    private var moveSettingButtonItem: UIBarButtonItem!
+    private var moveRecordButtonItem: UIBarButtonItem!
     
     private var presenter: HomePresenterInput!
     func inject(presenter: HomePresenterInput) {
@@ -19,8 +21,11 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         signOutButtonItem = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(tapSignOutButton))
+        moveSettingButtonItem = UIBarButtonItem(title: "設定", style: .done, target: self, action: #selector(tapMoveSettingButton))
+        moveRecordButtonItem = UIBarButtonItem(image: UIImage(systemName: "archivebox"), style: .done, target: self, action: #selector(tapMoveRecordButton))
         
         self.navigationItem.leftBarButtonItem = signOutButtonItem
+        self.navigationItem.rightBarButtonItems = [moveSettingButtonItem, moveRecordButtonItem]
     }
     
     static func makeFromStoryboard() -> HomeViewController {
@@ -35,6 +40,14 @@ final class HomeViewController: UIViewController {
     func tapSignOutButton() {
         // presenterを利用してログアウト機能を実装する
         presenter.logOut()
+    }
+    
+    func tapMoveSettingButton() {
+        print("設定画面に移動")
+    }
+    
+    func tapMoveRecordButton() {
+        print("記録画面に移動")
     }
 }
 
