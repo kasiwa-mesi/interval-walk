@@ -46,6 +46,13 @@ final class Router {
     func showReStart() {
         self.showRoot(window: self.window)
     }
+    
+    func showStopwatch(from: UIViewController) {
+        let vc = StopwatchViewController.makeFromStoryboard()
+        let presenter = StopwatchPresenter(output: vc)
+        vc.inject(presenter: presenter)
+        self.pushNavigate(vc: vc, window: window)
+    }
 }
 
 private extension Router {

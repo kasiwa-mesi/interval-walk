@@ -31,6 +31,12 @@
 		27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */; };
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
 		27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DEB29A1D4BC00F025B4 /* AuthService.swift */; };
+		273175EF29A70F050056D7F8 /* Stopwatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273175EE29A70F050056D7F8 /* Stopwatch.storyboard */; };
+		27B5C98C29A71738003F93E6 /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5C98B29A71738003F93E6 /* StopwatchViewController.swift */; };
+		27B5C98E29A72C6F003F93E6 /* StopwatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5C98D29A72C6F003F93E6 /* StopwatchPresenter.swift */; };
+		27B5C99129A73EEE003F93E6 /* RunningStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5C99029A73EEE003F93E6 /* RunningStateModel.swift */; };
+		27B5C99329A7405A003F93E6 /* PauseStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5C99229A7405A003F93E6 /* PauseStateModel.swift */; };
+		27B5C99529A7408C003F93E6 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5C99429A7408C003F93E6 /* StateModel.swift */; };
 		A22FBB55A91E4D9CB12D72F1 /* Pods_IntervalWalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE334D8206F4AB110D39D9F /* Pods_IntervalWalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +67,12 @@
 		27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		27274DEB29A1D4BC00F025B4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		273175EE29A70F050056D7F8 /* Stopwatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stopwatch.storyboard; sourceTree = "<group>"; };
+		27B5C98B29A71738003F93E6 /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
+		27B5C98D29A72C6F003F93E6 /* StopwatchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchPresenter.swift; sourceTree = "<group>"; };
+		27B5C99029A73EEE003F93E6 /* RunningStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningStateModel.swift; sourceTree = "<group>"; };
+		27B5C99229A7405A003F93E6 /* PauseStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseStateModel.swift; sourceTree = "<group>"; };
+		27B5C99429A7408C003F93E6 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
 		4DE334D8206F4AB110D39D9F /* Pods_IntervalWalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntervalWalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC74FE14CEF966989D6D024D /* Pods-IntervalWalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntervalWalk.debug.xcconfig"; path = "Target Support Files/Pods-IntervalWalk/Pods-IntervalWalk.debug.xcconfig"; sourceTree = "<group>"; };
 		F7576817779688F5CCF36E59 /* Pods-IntervalWalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntervalWalk.release.xcconfig"; path = "Target Support Files/Pods-IntervalWalk/Pods-IntervalWalk.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +154,8 @@
 		2722583A29A09F18003178E4 /* IntervalWalk */ = {
 			isa = PBXGroup;
 			children = (
+				27B5C98F29A73EBB003F93E6 /* Model */,
+				273175EB29A70EDF0056D7F8 /* Stopwatch */,
 				2721950C29A5DA7600B9D4D5 /* SetEmailChanged */,
 				2724360E29A508460050CD6D /* SetPasswordChanged */,
 				2724360729A4A1AF0050CD6D /* Home */,
@@ -272,6 +286,42 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		273175EB29A70EDF0056D7F8 /* Stopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				273175ED29A70EF70056D7F8 /* Presenter */,
+				273175EC29A70EEF0056D7F8 /* ViewController */,
+				273175EE29A70F050056D7F8 /* Stopwatch.storyboard */,
+			);
+			path = Stopwatch;
+			sourceTree = "<group>";
+		};
+		273175EC29A70EEF0056D7F8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27B5C98B29A71738003F93E6 /* StopwatchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		273175ED29A70EF70056D7F8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				27B5C98D29A72C6F003F93E6 /* StopwatchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		27B5C98F29A73EBB003F93E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27B5C99029A73EEE003F93E6 /* RunningStateModel.swift */,
+				27B5C99229A7405A003F93E6 /* PauseStateModel.swift */,
+				27B5C99429A7408C003F93E6 /* StateModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		88EAF520EAACF6C4875D6467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2720204B29A35241002C5DFF /* GoogleService-Info.plist in Resources */,
+				273175EF29A70F050056D7F8 /* Stopwatch.storyboard in Resources */,
 				2724361629A5094F0050CD6D /* SetPasswordChanged.storyboard in Resources */,
 				2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */,
 				2722584529A09F19003178E4 /* Assets.xcassets in Resources */,
@@ -413,16 +464,21 @@
 				2720204929A30C5C002C5DFF /* Validator.swift in Sources */,
 				2720204229A2FCA6002C5DFF /* RegisterPresenter.swift in Sources */,
 				27274DE229A1AAB600F025B4 /* Router.swift in Sources */,
+				27B5C99529A7408C003F93E6 /* StateModel.swift in Sources */,
+				27B5C98E29A72C6F003F93E6 /* StopwatchPresenter.swift in Sources */,
 				2724360429A484DC0050CD6D /* LoginPresenter.swift in Sources */,
 				2720204529A30922002C5DFF /* UIViewController+.swift in Sources */,
 				2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */,
+				27B5C99129A73EEE003F93E6 /* RunningStateModel.swift in Sources */,
 				2724360D29A4A1E30050CD6D /* HomeViewController.swift in Sources */,
 				2724361829A5133C0050CD6D /* SetPasswordChangedViewController.swift in Sources */,
 				2721951029A5DAB500B9D4D5 /* SetEmailChangedPresenter.swift in Sources */,
+				27B5C99329A7405A003F93E6 /* PauseStateModel.swift in Sources */,
 				2721951229A5DAC700B9D4D5 /* SetEmailChangedViewController.swift in Sources */,
 				27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */,
 				2720204729A30940002C5DFF /* String+.swift in Sources */,
 				27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */,
+				27B5C98C29A71738003F93E6 /* StopwatchViewController.swift in Sources */,
 				2724361429A508A10050CD6D /* SetPasswordChangedPresenter.swift in Sources */,
 				2721951629A61A3800B9D4D5 /* HomePresenter.swift in Sources */,
 			);
