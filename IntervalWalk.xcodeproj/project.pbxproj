@@ -32,6 +32,9 @@
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
 		27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DEB29A1D4BC00F025B4 /* AuthService.swift */; };
 		273175EF29A70F050056D7F8 /* Stopwatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273175EE29A70F050056D7F8 /* Stopwatch.storyboard */; };
+		275A09D829A774D9000842CF /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 275A09D729A774D8000842CF /* start.mp3 */; };
+		275A09DA29A7860F000842CF /* speedy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 275A09D929A7860F000842CF /* speedy.mp3 */; };
+		275A09DC29A78615000842CF /* slow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 275A09DB29A78615000842CF /* slow.mp3 */; };
 		27B5C98C29A71738003F93E6 /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5C98B29A71738003F93E6 /* StopwatchViewController.swift */; };
 		27B5C98E29A72C6F003F93E6 /* StopwatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5C98D29A72C6F003F93E6 /* StopwatchPresenter.swift */; };
 		27B5C99129A73EEE003F93E6 /* RunningStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5C99029A73EEE003F93E6 /* RunningStateModel.swift */; };
@@ -68,6 +71,9 @@
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		27274DEB29A1D4BC00F025B4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		273175EE29A70F050056D7F8 /* Stopwatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stopwatch.storyboard; sourceTree = "<group>"; };
+		275A09D729A774D8000842CF /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
+		275A09D929A7860F000842CF /* speedy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = speedy.mp3; sourceTree = "<group>"; };
+		275A09DB29A78615000842CF /* slow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slow.mp3; sourceTree = "<group>"; };
 		27B5C98B29A71738003F93E6 /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 		27B5C98D29A72C6F003F93E6 /* StopwatchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchPresenter.swift; sourceTree = "<group>"; };
 		27B5C99029A73EEE003F93E6 /* RunningStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningStateModel.swift; sourceTree = "<group>"; };
@@ -166,6 +172,9 @@
 				27274DE029A1AA9F00F025B4 /* Router */,
 				2722583B29A09F18003178E4 /* AppDelegate.swift */,
 				2722584429A09F19003178E4 /* Assets.xcassets */,
+				275A09D729A774D8000842CF /* start.mp3 */,
+				275A09D929A7860F000842CF /* speedy.mp3 */,
+				275A09DB29A78615000842CF /* slow.mp3 */,
 				2722584629A09F19003178E4 /* LaunchScreen.storyboard */,
 				2720204A29A35241002C5DFF /* GoogleService-Info.plist */,
 				2722584929A09F19003178E4 /* Info.plist */,
@@ -403,11 +412,14 @@
 				273175EF29A70F050056D7F8 /* Stopwatch.storyboard in Resources */,
 				2724361629A5094F0050CD6D /* SetPasswordChanged.storyboard in Resources */,
 				2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */,
+				275A09DA29A7860F000842CF /* speedy.mp3 in Resources */,
 				2722584529A09F19003178E4 /* Assets.xcassets in Resources */,
 				2724360B29A4A1CB0050CD6D /* Home.storyboard in Resources */,
 				2724360629A484ED0050CD6D /* Login.storyboard in Resources */,
+				275A09D829A774D9000842CF /* start.mp3 in Resources */,
 				27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */,
 				2721951429A5DADE00B9D4D5 /* SetEmailChanged.storyboard in Resources */,
+				275A09DC29A78615000842CF /* slow.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

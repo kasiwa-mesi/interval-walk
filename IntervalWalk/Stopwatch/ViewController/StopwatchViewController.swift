@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import AVFoundation
 
 final class StopwatchViewController: UIViewController {
     @IBOutlet private weak var speedLabel: UILabel!
     @IBOutlet private weak var timerLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton! {
+    @IBOutlet private weak var walkingImage: UIImageView!
+    @IBOutlet private weak var startButton: UIButton! {
         didSet {
             startButton.addTarget(self, action: #selector(tapStartButton), for: .touchUpInside)
         }
     }
-    @IBOutlet weak var finishButton: UIButton! {
+    @IBOutlet private weak var finishButton: UIButton! {
         didSet {
             finishButton.addTarget(self, action: #selector(tapFinishButton), for: .touchUpInside)
         }
@@ -53,6 +55,7 @@ private extension StopwatchViewController {
 
 @objc private extension StopwatchViewController {
     func tapStartButton() {
+        presenter.playStartSound()
         presenter.setStateChanged()
         updateStartButton()
     }
@@ -74,5 +77,21 @@ extension StopwatchViewController: StopwatchPresenterOutput {
     func updateTimerLabel() {
         presenter.setTimerLabelUpdated()
         timerLabel.text = presenter.timerLabel
+    }
+    
+    func setSpeedLabelSpeedy() {
+        speedLabel.text = "早歩き"
+        speedLabel.textColor = UIColor(red: 0.92, green: 0.52, blue: 0.52, alpha: 1.0)
+        timerLabel.textColor = UIColor(red: 0.92, green: 0.52, blue: 0.52, alpha: 1.0)
+    }
+    
+    func setSpeedLabelSlow() {
+        speedLabel.text = "ゆっくり"
+        speedLabel.textColor = UIColor(red: 0.37, green: 0.53, blue: 0.77, alpha: 1.0)
+        timerLabel.textColor = UIColor(red: 0.37, green: 0.53, blue: 0.77, alpha: 1.0)
+    }
+    
+    func updateWalkingImage(name: String) {
+        walkingImage.image = UIImage(named: name)
     }
 }
