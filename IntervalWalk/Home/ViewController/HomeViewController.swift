@@ -12,7 +12,7 @@ final class HomeViewController: UIViewController {
     private var moveSettingButtonItem: UIBarButtonItem!
     private var moveRecordButtonItem: UIBarButtonItem!
     
-    @IBOutlet weak var moveStopwatchButton: UIButton! {
+    @IBOutlet private weak var moveStopwatchButton: UIButton! {
         didSet {
             moveStopwatchButton.addTarget(self, action: #selector(tapMoveStopwatchButton), for: .touchUpInside)
         }

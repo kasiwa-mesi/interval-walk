@@ -23,6 +23,9 @@ protocol StopwatchPresenterInput {
 protocol StopwatchPresenterOutput {
     func showErrorAlert(code: String, message: String)
     func updateTimerLabel()
+    func updateWalkingImage(name: String)
+    func setSpeedLabelSpeedy()
+    func setSpeedLabelSlow()
 }
 
 
@@ -52,18 +55,6 @@ final class StopwatchPresenter {
     init(output: StopwatchPresenterOutput) {
         self._state = .idle
         self._timerLabel = "00:00:00"
-        
-        guard let soundURL = Bundle.main.url(forResource: "start", withExtension: "mp3") else {
-            print("音声読み込めない")
-            return
-        }
-        do {
-            _player = try AVAudioPlayer(contentsOf: soundURL)
-        } catch let error as NSError {
-            output.showErrorAlert(code: String(error.code), message: error.localizedDescription)
-            print("error")
-        }
-        
         self.output = output
     }
     
@@ -76,6 +67,20 @@ final class StopwatchPresenter {
                 self?.output.updateTimerLabel()
             }
         )
+    }
+    
+    private func playSound(name: String) {
+        guard let soundURL = Bundle.main.url(forResource: name, withExtension: "mp3") else {
+            print("音声読み込めない")
+            return
+        }
+        do {
+            _player = try AVAudioPlayer(contentsOf: soundURL)
+            _player?.play()
+        } catch let error as NSError {
+            output.showErrorAlert(code: String(error.code), message: error.localizedDescription)
+            print("error")
+        }
     }
 }
 
@@ -98,12 +103,33 @@ extension StopwatchPresenter: StopwatchPresenterInput {
     
     func setTimerLabelUpdated() {
         let elapsedTime = state.elapsedTime(now: Date())
+        let fixedElapsedTime = floor(Double(elapsedTime))
         
         let hour = Int(elapsedTime) / 3600
         let minute = Int(elapsedTime) / 60
         let second = Int(elapsedTime) % 60
         
+        print(fixedElapsedTime)
         print(hour, minute, second)
+        
+        if (minute + 1) % 6 == 0 && second == 54 {
+            print("ゆっくりに切り替える")
+            playSound(name: "slow")
+        } else if (minute + 1) % 3 == 0 && second == 54 {
+            print("早歩きに切り替える")
+            playSound(name: "speedy")
+        }
+        
+        if minute != 0 && minute % 6 == 0 && second == 0 {
+            output.setSpeedLabelSlow()
+            output.updateWalkingImage(name: "slow")
+            print("ゆっくりに切り替える")
+        } else if minute != 0 && minute % 3 == 0 && second == 0 {
+            output.setSpeedLabelSpeedy()
+            output.updateWalkingImage(name: "speedy")
+            print("早歩きに切り替える")
+        }
+        print(elapsedTime)
         
         _timerLabel = String(format: "%02d:%02d:%02d", hour, minute, second)
     }
@@ -151,7 +177,7 @@ extension StopwatchPresenter: StopwatchPresenterInput {
     func playStartSound() {
         switch state {
         case .idle, .pause:
-            player?.play()
+            playSound(name: "start")
         case .running:
             break
         }
