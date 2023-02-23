@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import AVFoundation
 
 protocol StopwatchPresenterInput {
     var state: State { get }
     var timerLabel: String { get }
+    var player: AVAudioPlayer? { get }
     func showErrorAlert(error: NSError?)
     func getStartButtonTitle() -> String
     func setTimerLabelUpdated()
     func setStateChanged()
     func reset()
+    func playStartSound()
 }
 
 protocol StopwatchPresenterOutput {
@@ -38,10 +41,29 @@ final class StopwatchPresenter {
         }
     }
     
+    private var _player: AVAudioPlayer?
+    var player: AVAudioPlayer? {
+        get {
+            return _player
+        }
+    }
+    
     private var output: StopwatchPresenterOutput!
     init(output: StopwatchPresenterOutput) {
         self._state = .idle
         self._timerLabel = "00:00:00"
+        
+        guard let soundURL = Bundle.main.url(forResource: "start", withExtension: "mp3") else {
+            print("音声読み込めない")
+            return
+        }
+        do {
+            _player = try AVAudioPlayer(contentsOf: soundURL)
+        } catch let error as NSError {
+            output.showErrorAlert(code: String(error.code), message: error.localizedDescription)
+            print("error")
+        }
+        
         self.output = output
     }
     
@@ -89,7 +111,6 @@ extension StopwatchPresenter: StopwatchPresenterInput {
     func setStateChanged() {
         switch state {
         case .idle:
-            
             let runningState = RunningStateModel(
                 elapsedTime: 0,
                 timer: scheduleTimer()
@@ -124,6 +145,15 @@ extension StopwatchPresenter: StopwatchPresenterInput {
             _state = .idle
         case .pause:
             _state = .idle
+        }
+    }
+    
+    func playStartSound() {
+        switch state {
+        case .idle, .pause:
+            player?.play()
+        case .running:
+            break
         }
     }
 }

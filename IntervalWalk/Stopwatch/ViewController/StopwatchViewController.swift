@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 final class StopwatchViewController: UIViewController {
     @IBOutlet private weak var speedLabel: UILabel!
@@ -53,6 +54,7 @@ private extension StopwatchViewController {
 
 @objc private extension StopwatchViewController {
     func tapStartButton() {
+        presenter.playStartSound()
         presenter.setStateChanged()
         updateStartButton()
     }
