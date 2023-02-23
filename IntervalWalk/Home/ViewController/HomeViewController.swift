@@ -12,6 +12,13 @@ final class HomeViewController: UIViewController {
     private var moveSettingButtonItem: UIBarButtonItem!
     private var moveRecordButtonItem: UIBarButtonItem!
     
+    @IBOutlet weak var moveStopwatchButton: UIButton! {
+        didSet {
+            moveStopwatchButton.addTarget(self, action: #selector(tapMoveStopwatchButton), for: .touchUpInside)
+        }
+    }
+    
+    
     private var presenter: HomePresenterInput!
     func inject(presenter: HomePresenterInput) {
       self.presenter = presenter
@@ -48,6 +55,10 @@ final class HomeViewController: UIViewController {
     
     func tapMoveRecordButton() {
         print("記録画面に移動")
+    }
+    
+    func tapMoveStopwatchButton() {
+        Router.shared.showStopwatch(from: self)
     }
 }
 

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stopwatch View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="StopwatchViewController" customModule="IntervalWalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BYf-ET-3fT">
+                                <rect key="frame" x="16" y="0.0" width="288" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oj-BA-JWo">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="slow" translatesAutoresizingMaskIntoConstraints="NO" id="wPv-5d-C5y">
+                                        <rect key="frame" x="0.0" y="69.5" width="288" height="306"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZ7-PG-Bg0" userLabel="Timer Label">
+                                        <rect key="frame" x="0.0" y="387.5" width="288" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmC-qj-76e">
+                                        <rect key="frame" x="0.0" y="457" width="288" height="111"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hig-MY-sOO">
+                                                <rect key="frame" x="16" y="16" width="256" height="63"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-Az-QSk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="63"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="スタート"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNc-Gb-cSS">
+                                                        <rect key="frame" x="128" y="0.0" width="128" height="63"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="終了"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="hig-MY-sOO" secondAttribute="trailing" constant="16" id="03t-4U-W5K"/>
+                                            <constraint firstItem="hig-MY-sOO" firstAttribute="leading" secondItem="PmC-qj-76e" secondAttribute="leading" constant="16" id="8rV-IM-eOU"/>
+                                            <constraint firstAttribute="bottom" secondItem="hig-MY-sOO" secondAttribute="bottom" constant="32" id="KFy-ua-lR8"/>
+                                            <constraint firstItem="hig-MY-sOO" firstAttribute="top" secondItem="PmC-qj-76e" secondAttribute="top" constant="16" id="buu-66-bUb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BYf-ET-3fT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="8TE-eh-G7g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BYf-ET-3fT" secondAttribute="trailing" constant="16" id="FJ0-kF-0hS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BYf-ET-3fT" secondAttribute="bottom" id="aCa-zN-K1n"/>
+                            <constraint firstItem="BYf-ET-3fT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="c0L-i4-dhw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="finishButton" destination="RNc-Gb-cSS" id="Ko9-ep-QBX"/>
+                        <outlet property="speedLabel" destination="9oj-BA-JWo" id="VYa-ZN-Noc"/>
+                        <outlet property="startButton" destination="aoE-Az-QSk" id="Nrx-Mj-bMS"/>
+                        <outlet property="timerLabel" destination="dZ7-PG-Bg0" id="uf1-d0-IJI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-23"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="slow" width="306" height="306"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

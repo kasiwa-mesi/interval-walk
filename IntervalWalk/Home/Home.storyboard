@@ -71,6 +71,9 @@
                             <constraint firstItem="4ek-yD-Yir" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="hQJ-jG-NEr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moveStopwatchButton" destination="Pwh-DY-6bG" id="2oV-7n-MvY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
