@@ -30,4 +30,24 @@ final class DatabaseService {
             completion(nil)
         }
     }
+    
+    func getCollection(userId: String?, completion: @escaping ([RecordModel], NSError?) -> Void) {
+        var records: [RecordModel] = []
+        let uid = userId ?? ""
+        db.collection("records").whereField("userId", isEqualTo: uid).getDocuments { (snapshot, error) in
+            if let databaseError = error as NSError? {
+                completion(records, databaseError)
+                return
+            }
+            
+            guard let documents = snapshot?.documents else {
+                return
+            }
+            
+            records = documents.compactMap { (queryDocumentSnapshot) -> RecordModel? in
+                return try? queryDocumentSnapshot.data(as: RecordModel.self)
+            }
+            completion(records, nil)
+        }
+    }
 }
