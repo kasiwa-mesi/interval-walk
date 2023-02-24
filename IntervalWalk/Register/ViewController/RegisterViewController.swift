@@ -65,6 +65,7 @@ final class RegisterViewController: UIViewController {
     }
     
     func tapMoveTrialButton() {
+        Router.shared.showTrial(from: self)
     }
 }
 

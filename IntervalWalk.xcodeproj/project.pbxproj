@@ -37,6 +37,9 @@
 		2725593229A894CB009B507F /* TableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725593129A894CB009B507F /* TableViewCell+.swift */; };
 		2725593729A8E5E4009B507F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725593629A8E5E4009B507F /* SettingViewController.swift */; };
 		2725593B29A8EA52009B507F /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2725593A29A8EA52009B507F /* Setting.storyboard */; };
+		2725594129A90582009B507F /* TrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725594029A90582009B507F /* TrialViewController.swift */; };
+		2725594329A90593009B507F /* TrialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725594229A90593009B507F /* TrialPresenter.swift */; };
+		2725594529A905D4009B507F /* Trial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2725594429A905D4009B507F /* Trial.storyboard */; };
 		27274DE229A1AAB600F025B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE129A1AAB600F025B4 /* Router.swift */; };
 		27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */; };
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
@@ -86,6 +89,9 @@
 		2725593129A894CB009B507F /* TableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+.swift"; sourceTree = "<group>"; };
 		2725593629A8E5E4009B507F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2725593A29A8EA52009B507F /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		2725594029A90582009B507F /* TrialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialViewController.swift; sourceTree = "<group>"; };
+		2725594229A90593009B507F /* TrialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPresenter.swift; sourceTree = "<group>"; };
+		2725594429A905D4009B507F /* Trial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trial.storyboard; sourceTree = "<group>"; };
 		27274DE129A1AAB600F025B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 		2722583A29A09F18003178E4 /* IntervalWalk */ = {
 			isa = PBXGroup;
 			children = (
+				2725593C29A903AB009B507F /* Trial */,
 				2725593329A8E5B4009B507F /* Setting */,
 				2725592B29A89284009B507F /* View */,
 				2725592229A8750D009B507F /* Record */,
@@ -344,6 +351,32 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		2725593C29A903AB009B507F /* Trial */ = {
+			isa = PBXGroup;
+			children = (
+				2725593F29A90569009B507F /* Presenter */,
+				2725593D29A903B3009B507F /* ViewController */,
+				2725594429A905D4009B507F /* Trial.storyboard */,
+			);
+			path = Trial;
+			sourceTree = "<group>";
+		};
+		2725593D29A903B3009B507F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2725594029A90582009B507F /* TrialViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2725593F29A90569009B507F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2725594229A90593009B507F /* TrialPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		27274DE029A1AA9F00F025B4 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +530,7 @@
 				2720204B29A35241002C5DFF /* GoogleService-Info.plist in Resources */,
 				273175EF29A70F050056D7F8 /* Stopwatch.storyboard in Resources */,
 				2725593B29A8EA52009B507F /* Setting.storyboard in Resources */,
+				2725594529A905D4009B507F /* Trial.storyboard in Resources */,
 				2724361629A5094F0050CD6D /* SetPasswordChanged.storyboard in Resources */,
 				2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */,
 				2725592A29A8754F009B507F /* Record.storyboard in Resources */,
@@ -567,10 +601,12 @@
 				2725592629A87533009B507F /* RecordViewController.swift in Sources */,
 				27274DE229A1AAB600F025B4 /* Router.swift in Sources */,
 				27B5C99529A7408C003F93E6 /* StateModel.swift in Sources */,
+				2725594129A90582009B507F /* TrialViewController.swift in Sources */,
 				27B5C98E29A72C6F003F93E6 /* StopwatchPresenter.swift in Sources */,
 				2724360429A484DC0050CD6D /* LoginPresenter.swift in Sources */,
 				2720204529A30922002C5DFF /* UIViewController+.swift in Sources */,
 				2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */,
+				2725594329A90593009B507F /* TrialPresenter.swift in Sources */,
 				27B5C99129A73EEE003F93E6 /* RunningStateModel.swift in Sources */,
 				2725591F29A85754009B507F /* DatabaseService.swift in Sources */,
 				2724360D29A4A1E30050CD6D /* HomeViewController.swift in Sources */,

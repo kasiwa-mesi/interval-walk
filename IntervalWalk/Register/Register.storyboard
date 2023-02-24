@@ -145,7 +145,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-gy-dNz" userLabel="Move Trial Button">
                                                                 <rect key="frame" x="0.0" y="136" width="343" height="44"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="メモを体験する">
+                                                                <buttonConfiguration key="configuration" style="plain" title="ウォーキングを体験する">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                                 </buttonConfiguration>
                                                             </button>
