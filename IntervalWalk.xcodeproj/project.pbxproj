@@ -29,6 +29,9 @@
 		2724361829A5133C0050CD6D /* SetPasswordChangedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724361729A5133C0050CD6D /* SetPasswordChangedViewController.swift */; };
 		2725591F29A85754009B507F /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725591E29A85754009B507F /* DatabaseService.swift */; };
 		2725592129A85A7D009B507F /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592029A85A7D009B507F /* RecordModel.swift */; };
+		2725592629A87533009B507F /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592529A87533009B507F /* RecordViewController.swift */; };
+		2725592829A87543009B507F /* RecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592729A87543009B507F /* RecordPresenter.swift */; };
+		2725592A29A8754F009B507F /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2725592929A8754F009B507F /* Record.storyboard */; };
 		27274DE229A1AAB600F025B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE129A1AAB600F025B4 /* Router.swift */; };
 		27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */; };
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
@@ -70,6 +73,9 @@
 		2724361729A5133C0050CD6D /* SetPasswordChangedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordChangedViewController.swift; sourceTree = "<group>"; };
 		2725591E29A85754009B507F /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		2725592029A85A7D009B507F /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		2725592529A87533009B507F /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		2725592729A87543009B507F /* RecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPresenter.swift; sourceTree = "<group>"; };
+		2725592929A8754F009B507F /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 		27274DE129A1AAB600F025B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 		2722583A29A09F18003178E4 /* IntervalWalk */ = {
 			isa = PBXGroup;
 			children = (
+				2725592229A8750D009B507F /* Record */,
 				27B5C98F29A73EBB003F93E6 /* Model */,
 				273175EB29A70EDF0056D7F8 /* Stopwatch */,
 				2721950C29A5DA7600B9D4D5 /* SetEmailChanged */,
@@ -262,6 +269,32 @@
 				2724361729A5133C0050CD6D /* SetPasswordChangedViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2725592229A8750D009B507F /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				2725592429A8751D009B507F /* Presenter */,
+				2725592329A87513009B507F /* ViewController */,
+				2725592929A8754F009B507F /* Record.storyboard */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		2725592329A87513009B507F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2725592529A87533009B507F /* RecordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2725592429A8751D009B507F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2725592729A87543009B507F /* RecordPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		27274DE029A1AA9F00F025B4 /* Router */ = {
@@ -418,6 +451,7 @@
 				273175EF29A70F050056D7F8 /* Stopwatch.storyboard in Resources */,
 				2724361629A5094F0050CD6D /* SetPasswordChanged.storyboard in Resources */,
 				2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */,
+				2725592A29A8754F009B507F /* Record.storyboard in Resources */,
 				275A09DA29A7860F000842CF /* speedy.mp3 in Resources */,
 				2722584529A09F19003178E4 /* Assets.xcassets in Resources */,
 				2724360B29A4A1CB0050CD6D /* Home.storyboard in Resources */,
@@ -481,6 +515,7 @@
 				2724360229A484CC0050CD6D /* LoginViewController.swift in Sources */,
 				2720204929A30C5C002C5DFF /* Validator.swift in Sources */,
 				2720204229A2FCA6002C5DFF /* RegisterPresenter.swift in Sources */,
+				2725592629A87533009B507F /* RecordViewController.swift in Sources */,
 				27274DE229A1AAB600F025B4 /* Router.swift in Sources */,
 				27B5C99529A7408C003F93E6 /* StateModel.swift in Sources */,
 				27B5C98E29A72C6F003F93E6 /* StopwatchPresenter.swift in Sources */,
@@ -495,6 +530,7 @@
 				27B5C99329A7405A003F93E6 /* PauseStateModel.swift in Sources */,
 				2721951229A5DAC700B9D4D5 /* SetEmailChangedViewController.swift in Sources */,
 				27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */,
+				2725592829A87543009B507F /* RecordPresenter.swift in Sources */,
 				2720204729A30940002C5DFF /* String+.swift in Sources */,
 				27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */,
 				27B5C98C29A71738003F93E6 /* StopwatchViewController.swift in Sources */,

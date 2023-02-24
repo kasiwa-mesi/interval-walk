@@ -219,7 +219,7 @@ extension StopwatchPresenter: StopwatchPresenterInput {
     func reset() {
         switch state {
         case .idle:
-            break
+            Router.shared.showReStart()
         case let .running(runningState):
             addRecord()
             runningState.timer.invalidate()
