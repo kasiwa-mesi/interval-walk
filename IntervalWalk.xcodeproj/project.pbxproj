@@ -27,6 +27,8 @@
 		2724361429A508A10050CD6D /* SetPasswordChangedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724361329A508A10050CD6D /* SetPasswordChangedPresenter.swift */; };
 		2724361629A5094F0050CD6D /* SetPasswordChanged.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2724361529A5094F0050CD6D /* SetPasswordChanged.storyboard */; };
 		2724361829A5133C0050CD6D /* SetPasswordChangedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724361729A5133C0050CD6D /* SetPasswordChangedViewController.swift */; };
+		2725591F29A85754009B507F /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725591E29A85754009B507F /* DatabaseService.swift */; };
+		2725592129A85A7D009B507F /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592029A85A7D009B507F /* RecordModel.swift */; };
 		27274DE229A1AAB600F025B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE129A1AAB600F025B4 /* Router.swift */; };
 		27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */; };
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
@@ -66,6 +68,8 @@
 		2724361329A508A10050CD6D /* SetPasswordChangedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordChangedPresenter.swift; sourceTree = "<group>"; };
 		2724361529A5094F0050CD6D /* SetPasswordChanged.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetPasswordChanged.storyboard; sourceTree = "<group>"; };
 		2724361729A5133C0050CD6D /* SetPasswordChangedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordChangedViewController.swift; sourceTree = "<group>"; };
+		2725591E29A85754009B507F /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		2725592029A85A7D009B507F /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		27274DE129A1AAB600F025B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 			children = (
 				27274DEB29A1D4BC00F025B4 /* AuthService.swift */,
 				2720204829A30C5C002C5DFF /* Validator.swift */,
+				2725591E29A85754009B507F /* DatabaseService.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				27B5C99029A73EEE003F93E6 /* RunningStateModel.swift */,
 				27B5C99229A7405A003F93E6 /* PauseStateModel.swift */,
 				27B5C99429A7408C003F93E6 /* StateModel.swift */,
+				2725592029A85A7D009B507F /* RecordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 				2720204529A30922002C5DFF /* UIViewController+.swift in Sources */,
 				2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */,
 				27B5C99129A73EEE003F93E6 /* RunningStateModel.swift in Sources */,
+				2725591F29A85754009B507F /* DatabaseService.swift in Sources */,
 				2724360D29A4A1E30050CD6D /* HomeViewController.swift in Sources */,
 				2724361829A5133C0050CD6D /* SetPasswordChangedViewController.swift in Sources */,
 				2721951029A5DAB500B9D4D5 /* SetEmailChangedPresenter.swift in Sources */,
@@ -491,6 +498,7 @@
 				2720204729A30940002C5DFF /* String+.swift in Sources */,
 				27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */,
 				27B5C98C29A71738003F93E6 /* StopwatchViewController.swift in Sources */,
+				2725592129A85A7D009B507F /* RecordModel.swift in Sources */,
 				2724361429A508A10050CD6D /* SetPasswordChangedPresenter.swift in Sources */,
 				2721951629A61A3800B9D4D5 /* HomePresenter.swift in Sources */,
 			);
