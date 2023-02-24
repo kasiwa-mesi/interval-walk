@@ -12,10 +12,15 @@ protocol RecordPresenterInput {
     func fetchRecords()
     var userId: String { get }
     var records: [RecordModel] { get }
+    var numberOfItems: Int { get }
+    func item(index: Int) -> RecordModel
 }
 
 protocol RecordPresenterOutput {
     func showErrorAlert(code: String, message: String)
+    func update(loading: Bool)
+    func showHowToView()
+    func updateRecordModels()
 }
 
 
@@ -44,6 +49,10 @@ final class RecordPresenter {
 }
 
 extension RecordPresenter: RecordPresenterInput {
+    var numberOfItems: Int { records.count }
+
+    func item(index: Int) -> RecordModel { records[index] }
+    
     func showErrorAlert(error: NSError?) {
         if let error {
             output.showErrorAlert(code: String(error.code), message: error.localizedDescription)
@@ -52,20 +61,21 @@ extension RecordPresenter: RecordPresenterInput {
     }
     
     func fetchRecords() {
+        output.update(loading: true)
         DatabaseService.shared.getCollection(userId: userId) { records, error in
+            self.output.update(loading: false)
             print("Recordを取得")
             print(records)
+            
             self.showErrorAlert(error: error)
             
             if records.isEmpty {
-                // recordsがない場合、howToViewを表示する
-                // self._showEmptyView.accept(!records.isEmpty)
-                // return
+                self.output.showHowToView()
+                return
             }
             
             self._records = records
-            // self._loading.accept(false)
-            // self._updateMemoModels.accept(memos)
+            self.output.updateRecordModels()
             return
         }
     }
