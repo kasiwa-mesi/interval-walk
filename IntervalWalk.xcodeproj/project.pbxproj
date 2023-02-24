@@ -767,6 +767,7 @@
 				DEVELOPMENT_TEAM = 25BLMP2S3B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntervalWalk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "インターバル・ウォーク2";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -799,6 +800,7 @@
 				DEVELOPMENT_TEAM = 25BLMP2S3B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntervalWalk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "インターバル・ウォーク2";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
