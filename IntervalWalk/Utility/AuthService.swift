@@ -14,6 +14,8 @@ final class AuthService {
     
     func getCurrentUser() -> User? { Auth.auth().currentUser }
     
+    func getCurrentUserId() -> String? { Auth.auth().currentUser?.uid }
+    
     func getCurrentUserEmail() -> String? { Auth.auth().currentUser?.email }
     
     func getCredential(email: String, password: String) -> AuthCredential {

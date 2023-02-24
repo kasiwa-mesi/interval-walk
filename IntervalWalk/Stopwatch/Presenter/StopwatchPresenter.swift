@@ -12,6 +12,10 @@ protocol StopwatchPresenterInput {
     var state: State { get }
     var timerLabel: String { get }
     var player: AVAudioPlayer? { get }
+    var hour: Int { get }
+    var minute: Int { get }
+    var second: Int { get }
+    var userId: String { get }
     func showErrorAlert(error: NSError?)
     func getStartButtonTitle() -> String
     func setTimerLabelUpdated()
@@ -51,10 +55,45 @@ final class StopwatchPresenter {
         }
     }
     
+    private var _hour: Int
+    var hour: Int {
+        get {
+            return _hour
+        }
+    }
+    
+    private var _minute: Int
+    var minute: Int {
+        get {
+            return _minute
+        }
+    }
+    
+    private var _second: Int
+    var second: Int {
+        get {
+            return _second
+        }
+    }
+    
+    private var _userId: String
+    var userId: String {
+        get {
+            return _userId
+        }
+    }
+    
     private var output: StopwatchPresenterOutput!
     init(output: StopwatchPresenterOutput) {
         self._state = .idle
         self._timerLabel = "00:00:00"
+        self._hour = 0
+        self._minute = 0
+        self._second = 0
+        
+        let userId = AuthService.shared.getCurrentUserId()
+        self._userId = userId ?? ""
+        
         self.output = output
     }
     
@@ -82,6 +121,21 @@ final class StopwatchPresenter {
             print("error")
         }
     }
+    
+    private func addRecord() {
+        if minute < 3 {
+            Router.shared.showReStart()
+            return
+        }
+        
+        DatabaseService.shared.addRecord(hour: hour, minute: minute, second: second, userId: self.userId) { error in
+            if let error {
+                self.output.showErrorAlert(code: String(error.code), message: error.localizedDescription)
+                return
+            }
+            Router.shared.showReStart()
+        }
+    }
 }
 
 extension StopwatchPresenter: StopwatchPresenterInput {
@@ -105,9 +159,9 @@ extension StopwatchPresenter: StopwatchPresenterInput {
         let elapsedTime = state.elapsedTime(now: Date())
         let fixedElapsedTime = floor(Double(elapsedTime))
         
-        let hour = Int(elapsedTime) / 3600
-        let minute = Int(elapsedTime) / 60
-        let second = Int(elapsedTime) % 60
+        _hour = Int(elapsedTime) / 3600
+        _minute = Int(elapsedTime) / 60
+        _second = Int(elapsedTime) % 60
         
         print(fixedElapsedTime)
         print(hour, minute, second)
@@ -165,11 +219,13 @@ extension StopwatchPresenter: StopwatchPresenterInput {
     func reset() {
         switch state {
         case .idle:
-            break
+            Router.shared.showReStart()
         case let .running(runningState):
+            addRecord()
             runningState.timer.invalidate()
             _state = .idle
         case .pause:
+            addRecord()
             _state = .idle
         }
     }

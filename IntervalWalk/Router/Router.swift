@@ -53,6 +53,13 @@ final class Router {
         vc.inject(presenter: presenter)
         self.pushNavigate(vc: vc, window: window)
     }
+    
+    func showRecord(from: UIViewController) {
+        let vc = RecordViewController.makeFromStoryboard()
+        let presenter = RecordPresenter(output: vc)
+        vc.inject(presenter: presenter)
+        show(from: from, next: vc)
+    }
 }
 
 private extension Router {

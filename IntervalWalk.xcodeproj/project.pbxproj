@@ -27,6 +27,14 @@
 		2724361429A508A10050CD6D /* SetPasswordChangedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724361329A508A10050CD6D /* SetPasswordChangedPresenter.swift */; };
 		2724361629A5094F0050CD6D /* SetPasswordChanged.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2724361529A5094F0050CD6D /* SetPasswordChanged.storyboard */; };
 		2724361829A5133C0050CD6D /* SetPasswordChangedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724361729A5133C0050CD6D /* SetPasswordChangedViewController.swift */; };
+		2725591F29A85754009B507F /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725591E29A85754009B507F /* DatabaseService.swift */; };
+		2725592129A85A7D009B507F /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592029A85A7D009B507F /* RecordModel.swift */; };
+		2725592629A87533009B507F /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592529A87533009B507F /* RecordViewController.swift */; };
+		2725592829A87543009B507F /* RecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592729A87543009B507F /* RecordPresenter.swift */; };
+		2725592A29A8754F009B507F /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2725592929A8754F009B507F /* Record.storyboard */; };
+		2725592E29A8929C009B507F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592D29A8929C009B507F /* TableViewCell.swift */; };
+		2725593029A892AB009B507F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2725592F29A892AB009B507F /* TableViewCell.xib */; };
+		2725593229A894CB009B507F /* TableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725593129A894CB009B507F /* TableViewCell+.swift */; };
 		27274DE229A1AAB600F025B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE129A1AAB600F025B4 /* Router.swift */; };
 		27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */; };
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
@@ -66,6 +74,14 @@
 		2724361329A508A10050CD6D /* SetPasswordChangedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordChangedPresenter.swift; sourceTree = "<group>"; };
 		2724361529A5094F0050CD6D /* SetPasswordChanged.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetPasswordChanged.storyboard; sourceTree = "<group>"; };
 		2724361729A5133C0050CD6D /* SetPasswordChangedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordChangedViewController.swift; sourceTree = "<group>"; };
+		2725591E29A85754009B507F /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		2725592029A85A7D009B507F /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		2725592529A87533009B507F /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		2725592729A87543009B507F /* RecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPresenter.swift; sourceTree = "<group>"; };
+		2725592929A8754F009B507F /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
+		2725592D29A8929C009B507F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2725592F29A892AB009B507F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		2725593129A894CB009B507F /* TableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+.swift"; sourceTree = "<group>"; };
 		27274DE129A1AAB600F025B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -109,6 +125,7 @@
 			children = (
 				2720204429A30922002C5DFF /* UIViewController+.swift */,
 				2720204629A30940002C5DFF /* String+.swift */,
+				2725593129A894CB009B507F /* TableViewCell+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -160,6 +177,8 @@
 		2722583A29A09F18003178E4 /* IntervalWalk */ = {
 			isa = PBXGroup;
 			children = (
+				2725592B29A89284009B507F /* View */,
+				2725592229A8750D009B507F /* Record */,
 				27B5C98F29A73EBB003F93E6 /* Model */,
 				273175EB29A70EDF0056D7F8 /* Stopwatch */,
 				2721950C29A5DA7600B9D4D5 /* SetEmailChanged */,
@@ -260,6 +279,49 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		2725592229A8750D009B507F /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				2725592429A8751D009B507F /* Presenter */,
+				2725592329A87513009B507F /* ViewController */,
+				2725592929A8754F009B507F /* Record.storyboard */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		2725592329A87513009B507F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2725592529A87533009B507F /* RecordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2725592429A8751D009B507F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2725592729A87543009B507F /* RecordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2725592B29A89284009B507F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2725592C29A8928B009B507F /* TableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2725592C29A8928B009B507F /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2725592D29A8929C009B507F /* TableViewCell.swift */,
+				2725592F29A892AB009B507F /* TableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		27274DE029A1AA9F00F025B4 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +353,7 @@
 			children = (
 				27274DEB29A1D4BC00F025B4 /* AuthService.swift */,
 				2720204829A30C5C002C5DFF /* Validator.swift */,
+				2725591E29A85754009B507F /* DatabaseService.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -327,6 +390,7 @@
 				27B5C99029A73EEE003F93E6 /* RunningStateModel.swift */,
 				27B5C99229A7405A003F93E6 /* PauseStateModel.swift */,
 				27B5C99429A7408C003F93E6 /* StateModel.swift */,
+				2725592029A85A7D009B507F /* RecordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -412,10 +476,12 @@
 				273175EF29A70F050056D7F8 /* Stopwatch.storyboard in Resources */,
 				2724361629A5094F0050CD6D /* SetPasswordChanged.storyboard in Resources */,
 				2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */,
+				2725592A29A8754F009B507F /* Record.storyboard in Resources */,
 				275A09DA29A7860F000842CF /* speedy.mp3 in Resources */,
 				2722584529A09F19003178E4 /* Assets.xcassets in Resources */,
 				2724360B29A4A1CB0050CD6D /* Home.storyboard in Resources */,
 				2724360629A484ED0050CD6D /* Login.storyboard in Resources */,
+				2725593029A892AB009B507F /* TableViewCell.xib in Resources */,
 				275A09D829A774D9000842CF /* start.mp3 in Resources */,
 				27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */,
 				2721951429A5DADE00B9D4D5 /* SetEmailChanged.storyboard in Resources */,
@@ -475,6 +541,7 @@
 				2724360229A484CC0050CD6D /* LoginViewController.swift in Sources */,
 				2720204929A30C5C002C5DFF /* Validator.swift in Sources */,
 				2720204229A2FCA6002C5DFF /* RegisterPresenter.swift in Sources */,
+				2725592629A87533009B507F /* RecordViewController.swift in Sources */,
 				27274DE229A1AAB600F025B4 /* Router.swift in Sources */,
 				27B5C99529A7408C003F93E6 /* StateModel.swift in Sources */,
 				27B5C98E29A72C6F003F93E6 /* StopwatchPresenter.swift in Sources */,
@@ -482,16 +549,21 @@
 				2720204529A30922002C5DFF /* UIViewController+.swift in Sources */,
 				2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */,
 				27B5C99129A73EEE003F93E6 /* RunningStateModel.swift in Sources */,
+				2725591F29A85754009B507F /* DatabaseService.swift in Sources */,
 				2724360D29A4A1E30050CD6D /* HomeViewController.swift in Sources */,
+				2725592E29A8929C009B507F /* TableViewCell.swift in Sources */,
 				2724361829A5133C0050CD6D /* SetPasswordChangedViewController.swift in Sources */,
 				2721951029A5DAB500B9D4D5 /* SetEmailChangedPresenter.swift in Sources */,
 				27B5C99329A7405A003F93E6 /* PauseStateModel.swift in Sources */,
 				2721951229A5DAC700B9D4D5 /* SetEmailChangedViewController.swift in Sources */,
 				27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */,
+				2725592829A87543009B507F /* RecordPresenter.swift in Sources */,
 				2720204729A30940002C5DFF /* String+.swift in Sources */,
 				27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */,
 				27B5C98C29A71738003F93E6 /* StopwatchViewController.swift in Sources */,
+				2725592129A85A7D009B507F /* RecordModel.swift in Sources */,
 				2724361429A508A10050CD6D /* SetPasswordChangedPresenter.swift in Sources */,
+				2725593229A894CB009B507F /* TableViewCell+.swift in Sources */,
 				2721951629A61A3800B9D4D5 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

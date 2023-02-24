@@ -63,13 +63,14 @@ private extension StopwatchViewController {
     func tapFinishButton() {
         presenter.reset()
         updateStartButton()
-        Router.shared.showReStart()
     }
 }
 
 extension StopwatchViewController: StopwatchPresenterOutput {
     func showErrorAlert(code: String, message: String) {
-        let gotItAction = UIAlertAction(title: String.ok, style: .default)
+        let gotItAction = UIAlertAction(title: String.ok, style: .default) { _ in
+            Router.shared.showReStart()
+        }
         let errorTitle = String.errorTitle + code
         self.showAlert(title: errorTitle, message: message, actions: [gotItAction])
     }

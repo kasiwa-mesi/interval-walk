@@ -55,6 +55,7 @@ final class HomeViewController: UIViewController {
     
     func tapMoveRecordButton() {
         print("記録画面に移動")
+        Router.shared.showRecord(from: self)
     }
     
     func tapMoveStopwatchButton() {
