@@ -23,7 +23,11 @@ final class RecordViewController: UIViewController {
             howToView.isHidden = false
         }
     }
-    @IBOutlet private weak var startButton: UIButton!
+    @IBOutlet private weak var startButton: UIButton! {
+        didSet {
+            startButton.addTarget(self, action: #selector(tapStartButton), for: .touchUpInside)
+        }
+    }
     
     private var presenter: RecordPresenterInput!
     func inject(presenter: RecordPresenterInput) {
@@ -41,6 +45,12 @@ final class RecordViewController: UIViewController {
             fatalError()
         }
         return vc
+    }
+}
+
+@objc private extension RecordViewController {
+    func tapStartButton() {
+        Router.shared.showStopwatch(from: self)
     }
 }
 

@@ -35,6 +35,8 @@
 		2725592E29A8929C009B507F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725592D29A8929C009B507F /* TableViewCell.swift */; };
 		2725593029A892AB009B507F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2725592F29A892AB009B507F /* TableViewCell.xib */; };
 		2725593229A894CB009B507F /* TableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725593129A894CB009B507F /* TableViewCell+.swift */; };
+		2725593729A8E5E4009B507F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725593629A8E5E4009B507F /* SettingViewController.swift */; };
+		2725593B29A8EA52009B507F /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2725593A29A8EA52009B507F /* Setting.storyboard */; };
 		27274DE229A1AAB600F025B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE129A1AAB600F025B4 /* Router.swift */; };
 		27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */; };
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
@@ -82,6 +84,8 @@
 		2725592D29A8929C009B507F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2725592F29A892AB009B507F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		2725593129A894CB009B507F /* TableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+.swift"; sourceTree = "<group>"; };
+		2725593629A8E5E4009B507F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2725593A29A8EA52009B507F /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		27274DE129A1AAB600F025B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 		2722583A29A09F18003178E4 /* IntervalWalk */ = {
 			isa = PBXGroup;
 			children = (
+				2725593329A8E5B4009B507F /* Setting */,
 				2725592B29A89284009B507F /* View */,
 				2725592229A8750D009B507F /* Record */,
 				27B5C98F29A73EBB003F93E6 /* Model */,
@@ -320,6 +325,23 @@
 				2725592F29A892AB009B507F /* TableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		2725593329A8E5B4009B507F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2725593429A8E5C5009B507F /* ViewController */,
+				2725593A29A8EA52009B507F /* Setting.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		2725593429A8E5C5009B507F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2725593629A8E5E4009B507F /* SettingViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		27274DE029A1AA9F00F025B4 /* Router */ = {
@@ -474,6 +496,7 @@
 			files = (
 				2720204B29A35241002C5DFF /* GoogleService-Info.plist in Resources */,
 				273175EF29A70F050056D7F8 /* Stopwatch.storyboard in Resources */,
+				2725593B29A8EA52009B507F /* Setting.storyboard in Resources */,
 				2724361629A5094F0050CD6D /* SetPasswordChanged.storyboard in Resources */,
 				2722584829A09F19003178E4 /* LaunchScreen.storyboard in Resources */,
 				2725592A29A8754F009B507F /* Record.storyboard in Resources */,
@@ -557,6 +580,7 @@
 				27B5C99329A7405A003F93E6 /* PauseStateModel.swift in Sources */,
 				2721951229A5DAC700B9D4D5 /* SetEmailChangedViewController.swift in Sources */,
 				27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */,
+				2725593729A8E5E4009B507F /* SettingViewController.swift in Sources */,
 				2725592829A87543009B507F /* RecordPresenter.swift in Sources */,
 				2720204729A30940002C5DFF /* String+.swift in Sources */,
 				27274DEC29A1D4BC00F025B4 /* AuthService.swift in Sources */,

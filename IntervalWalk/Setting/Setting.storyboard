@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SettingViewController" customModule="IntervalWalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yto-YH-AZA">
+                                <rect key="frame" x="0.0" y="47" width="375" height="731"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEK-EU-ARF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jus-c8-25H">
+                                        <rect key="frame" x="0.0" y="36" width="375" height="403"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0hh-6f-QKo">
+                                                <rect key="frame" x="0.0" y="24" width="375" height="379"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-qh-rlq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189.66666666666666"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="パスワード再設定">
+                                                            <fontDescription key="titleFontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM2-PF-pxk">
+                                                        <rect key="frame" x="0.0" y="189.66666666666669" width="375" height="189.33333333333331"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="メールアドレス変更">
+                                                            <fontDescription key="titleFontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="0hh-6f-QKo" firstAttribute="leading" secondItem="Jus-c8-25H" secondAttribute="leading" id="CBc-Ly-6Pc"/>
+                                            <constraint firstAttribute="bottom" secondItem="0hh-6f-QKo" secondAttribute="bottom" id="Hnz-T1-3FT"/>
+                                            <constraint firstItem="0hh-6f-QKo" firstAttribute="top" secondItem="Jus-c8-25H" secondAttribute="top" constant="24" id="HtP-vj-Z68"/>
+                                            <constraint firstAttribute="trailing" secondItem="0hh-6f-QKo" secondAttribute="trailing" id="Pw4-7r-BIa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2B-9V-LIV">
+                                        <rect key="frame" x="0.0" y="439" width="375" height="292"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="anZ-YW-OTK">
+                                                <rect key="frame" x="8" y="16" width="359" height="260"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="無理せず、長く続けましょう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L70-M6-hEc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="teacher" translatesAutoresizingMaskIntoConstraints="NO" id="ion-8L-aoC">
+                                                        <rect key="frame" x="0.0" y="20" width="359" height="240"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="anZ-YW-OTK" secondAttribute="bottom" constant="16" id="FrN-0R-iJM"/>
+                                            <constraint firstAttribute="trailing" secondItem="anZ-YW-OTK" secondAttribute="trailing" constant="8" id="QRa-0X-ccs"/>
+                                            <constraint firstItem="anZ-YW-OTK" firstAttribute="leading" secondItem="z2B-9V-LIV" secondAttribute="leading" constant="8" id="RTe-xd-wjE"/>
+                                            <constraint firstItem="anZ-YW-OTK" firstAttribute="top" secondItem="z2B-9V-LIV" secondAttribute="top" constant="16" id="u1b-s3-8W0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yto-YH-AZA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="G0W-Eg-Q6N"/>
+                            <constraint firstItem="yto-YH-AZA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="MmN-lb-Qb0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yto-YH-AZA" secondAttribute="trailing" id="Sr7-wp-dVO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yto-YH-AZA" secondAttribute="bottom" id="dTe-4z-JQP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moveSetEmailChangedButton" destination="nM2-PF-pxk" id="PwO-5u-mtW"/>
+                        <outlet property="moveSetPasswordChangedButton" destination="Bgm-qh-rlq" id="9fP-jP-peP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-23"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="teacher" width="240" height="240"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
