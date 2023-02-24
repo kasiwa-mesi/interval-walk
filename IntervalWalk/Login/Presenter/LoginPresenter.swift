@@ -7,8 +7,6 @@
 
 import Foundation
 
-// 出力に関するprotocol
-
 protocol LoginPresenterInput {
     func showErrorAlert(error: NSError?)
     func signIn(email: String, password: String)

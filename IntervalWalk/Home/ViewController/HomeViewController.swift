@@ -18,7 +18,6 @@ final class HomeViewController: UIViewController {
         }
     }
     
-    
     private var presenter: HomePresenterInput!
     func inject(presenter: HomePresenterInput) {
       self.presenter = presenter
@@ -51,6 +50,7 @@ final class HomeViewController: UIViewController {
     
     func tapMoveSettingButton() {
         print("設定画面に移動")
+        Router.shared.showSetting(from: self)
     }
     
     func tapMoveRecordButton() {

@@ -60,6 +60,25 @@ final class Router {
         vc.inject(presenter: presenter)
         show(from: from, next: vc)
     }
+    
+    func showSetting(from: UIViewController) {
+        let vc = SettingViewController.makeFromStoryboard()
+        show(from: from, next: vc)
+    }
+    
+    func showSetEmailChanged(from: UIViewController) {
+        let vc = SetEmailChangedViewController.makeFromStoryboard()
+        let presenter = SetEmailChangedPresenter(output: vc)
+        vc.inject(presenter: presenter)
+        show(from: from, next: vc)
+    }
+    
+    func showSetPasswordChanged(from: UIViewController) {
+        let vc = SetPasswordChangedViewController.makeFromStoryboard()
+        let presenter = SetPasswordChangedPresenter(output: vc)
+        vc.inject(presenter: presenter)
+        show(from: from, next: vc)
+    }
 }
 
 private extension Router {
