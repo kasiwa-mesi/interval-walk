@@ -79,11 +79,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="finishButton" destination="RNc-Gb-cSS" id="Ko9-ep-QBX"/>
-                        <outlet property="speedLabel" destination="9oj-BA-JWo" id="VYa-ZN-Noc"/>
-                        <outlet property="startButton" destination="aoE-Az-QSk" id="Nrx-Mj-bMS"/>
-                        <outlet property="timerLabel" destination="dZ7-PG-Bg0" id="uf1-d0-IJI"/>
-                        <outlet property="walkingImage" destination="wPv-5d-C5y" id="2jM-1T-H4A"/>
+                        <outlet property="finishButton" destination="RNc-Gb-cSS" id="hSe-GZ-tqo"/>
+                        <outlet property="speedLabel" destination="9oj-BA-JWo" id="Jgm-Zh-vSz"/>
+                        <outlet property="startButton" destination="aoE-Az-QSk" id="QgX-Cv-PcA"/>
+                        <outlet property="timerLabel" destination="dZ7-PG-Bg0" id="UOs-GJ-R7U"/>
+                        <outlet property="walkingImage" destination="wPv-5d-C5y" id="Ob4-YQ-izh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
