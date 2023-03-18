@@ -40,6 +40,7 @@
 		2725594129A90582009B507F /* TrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725594029A90582009B507F /* TrialViewController.swift */; };
 		2725594329A90593009B507F /* TrialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725594229A90593009B507F /* TrialPresenter.swift */; };
 		2725594529A905D4009B507F /* Trial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2725594429A905D4009B507F /* Trial.storyboard */; };
+		272560C129C5BB830042E049 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272560C029C5BB830042E049 /* UIColor+.swift */; };
 		27274DE229A1AAB600F025B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE129A1AAB600F025B4 /* Router.swift */; };
 		27274DE729A1AB0E00F025B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */; };
 		27274DE929A1AB5F00F025B4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27274DE829A1AB5F00F025B4 /* Register.storyboard */; };
@@ -92,6 +93,7 @@
 		2725594029A90582009B507F /* TrialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialViewController.swift; sourceTree = "<group>"; };
 		2725594229A90593009B507F /* TrialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPresenter.swift; sourceTree = "<group>"; };
 		2725594429A905D4009B507F /* Trial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trial.storyboard; sourceTree = "<group>"; };
+		272560C029C5BB830042E049 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		27274DE129A1AAB600F025B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		27274DE629A1AB0E00F025B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27274DE829A1AB5F00F025B4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				2720204429A30922002C5DFF /* UIViewController+.swift */,
 				2720204629A30940002C5DFF /* String+.swift */,
 				2725593129A894CB009B507F /* TableViewCell+.swift */,
+				272560C029C5BB830042E049 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				2720204529A30922002C5DFF /* UIViewController+.swift in Sources */,
 				2722583C29A09F18003178E4 /* AppDelegate.swift in Sources */,
 				2725594329A90593009B507F /* TrialPresenter.swift in Sources */,
+				272560C129C5BB830042E049 /* UIColor+.swift in Sources */,
 				27B5C99129A73EEE003F93E6 /* RunningStateModel.swift in Sources */,
 				2725591F29A85754009B507F /* DatabaseService.swift in Sources */,
 				2724360D29A4A1E30050CD6D /* HomeViewController.swift in Sources */,

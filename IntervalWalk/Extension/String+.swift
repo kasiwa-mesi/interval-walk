@@ -15,4 +15,9 @@ extension String {
     static var imageErrorTitle: String { "画像を取得できませんでした" }
     static var memoPlaceholder: String { "メモを入力してください" }
     static var languageCode: String { "ja_JP" }
+    static var defaultTimerLabel: String { "00:00:00" }
+    static var startButtonLabel: String { "開始" }
+    static var stopButtonLabel: String { "停止" }
+    static var speedyLabel: String { "早歩き" }
+    static var slowlyLabel: String { "ゆっくり" }
 }
