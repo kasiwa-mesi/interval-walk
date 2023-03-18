@@ -145,9 +145,6 @@ extension TrialPresenter: TrialPresenterInput {
         _minute = Int(elapsedTime) / 60
         _second = Int(elapsedTime) % 60
         
-        print(fixedElapsedTime)
-        print(hour, minute, second)
-        
         if (minute + 1) % 6 == 0 && second == 54 {
             playSound(name: "slow")
         } else if (minute + 1) % 3 == 0 && second == 54 {
@@ -161,7 +158,6 @@ extension TrialPresenter: TrialPresenterInput {
             output.setSpeedLabelSpeedy()
             output.updateWalkingImage(name: "speedy")
         }
-        print(elapsedTime)
         
         _timerLabel = String(format: "%02d:%02d:%02d", hour, minute, second)
     }
