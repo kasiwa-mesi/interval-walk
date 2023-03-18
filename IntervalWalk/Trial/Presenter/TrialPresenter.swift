@@ -86,7 +86,7 @@ final class TrialPresenter {
     private var output: TrialPresenterOutput!
     init(output: TrialPresenterOutput) {
         self._state = .idle
-        self._timerLabel = "00:00:00"
+        self._timerLabel = String.defaultTimerLabel
         self._hour = 0
         self._minute = 0
         self._second = 0
@@ -102,7 +102,6 @@ final class TrialPresenter {
             withTimeInterval: 1.0,
             repeats: true,
             block: { [weak self] _ in
-                print("block")
                 self?.output.updateTimerLabel()
             }
         )
@@ -110,7 +109,6 @@ final class TrialPresenter {
     
     private func playSound(name: String) {
         guard let soundURL = Bundle.main.url(forResource: name, withExtension: "mp3") else {
-            print("音声読み込めない")
             return
         }
         do {
@@ -118,7 +116,6 @@ final class TrialPresenter {
             _player?.play()
         } catch let error as NSError {
             output.showErrorAlert(code: String(error.code), message: error.localizedDescription)
-            print("error")
         }
     }
 }
@@ -134,9 +131,9 @@ extension TrialPresenter: TrialPresenterInput {
     func getStartButtonTitle() -> String {
         switch state {
         case .idle, .pause:
-            return "開始"
+            return String.startButtonLabel
         case .running:
-            return "停止"
+            return String.stopButtonLabel
         }
     }
     
@@ -152,21 +149,17 @@ extension TrialPresenter: TrialPresenterInput {
         print(hour, minute, second)
         
         if (minute + 1) % 6 == 0 && second == 54 {
-            print("ゆっくりに切り替える")
             playSound(name: "slow")
         } else if (minute + 1) % 3 == 0 && second == 54 {
-            print("早歩きに切り替える")
             playSound(name: "speedy")
         }
         
         if minute != 0 && minute % 6 == 0 && second == 0 {
             output.setSpeedLabelSlow()
             output.updateWalkingImage(name: "slow")
-            print("ゆっくりに切り替える")
         } else if minute != 0 && minute % 3 == 0 && second == 0 {
             output.setSpeedLabelSpeedy()
             output.updateWalkingImage(name: "speedy")
-            print("早歩きに切り替える")
         }
         print(elapsedTime)
         
@@ -183,7 +176,6 @@ extension TrialPresenter: TrialPresenterInput {
             _state = .running(runningState)
             
         case let .running(runningState):
-            print("Timerを止める")
             runningState.timer.invalidate()
             _state = .pause(
                 PauseStateModel(

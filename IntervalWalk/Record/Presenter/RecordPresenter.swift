@@ -64,8 +64,6 @@ extension RecordPresenter: RecordPresenterInput {
         output.update(loading: true)
         DatabaseService.shared.getCollection(userId: userId) { records, error in
             self.output.update(loading: false)
-            print("Recordを取得")
-            print(records)
             
             self.showErrorAlert(error: error)
             
