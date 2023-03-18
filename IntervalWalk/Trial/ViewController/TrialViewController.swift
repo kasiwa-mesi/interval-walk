@@ -82,14 +82,14 @@ extension TrialViewController: TrialPresenterOutput {
     
     func setSpeedLabelSpeedy() {
         speedLabel.text = String.speedyLabel
-        speedLabel.textColor = UIColor(red: 0.92, green: 0.52, blue: 0.52, alpha: 1.0)
-        timerLabel.textColor = UIColor(red: 0.92, green: 0.52, blue: 0.52, alpha: 1.0)
+        speedLabel.textColor = UIColor.speedyColor
+        timerLabel.textColor = UIColor.speedyColor
     }
     
     func setSpeedLabelSlow() {
         speedLabel.text = String.slowlyLabel
-        speedLabel.textColor = UIColor(red: 0.37, green: 0.53, blue: 0.77, alpha: 1.0)
-        timerLabel.textColor = UIColor(red: 0.37, green: 0.53, blue: 0.77, alpha: 1.0)
+        speedLabel.textColor = UIColor.slowlyColor
+        timerLabel.textColor = UIColor.slowlyColor
     }
     
     func updateWalkingImage(name: String) {
