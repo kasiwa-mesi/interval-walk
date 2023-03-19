@@ -36,7 +36,7 @@
   - Firebase Authentication)
     - アプリ内のログイン機能として活用
   - Firestore
-    - ウォーキングを行ったokonatta記録を保存するデータベースとして活用
+    - ウォーキングを行った記録を保存するデータベースとして活用
 - アーキテクチャ
   - MVP(Model - View - Presenter)
 
