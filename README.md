@@ -27,7 +27,7 @@
 
 相談されたことをきっかけに**お年寄りが使いやすいインターバル速歩のアプリ**を開発し始めた。
 
-<img src="https://gyazo.com/bab0df2351fc815294e668583147da25/raw" width="800" height="200">
+<img src="https://gyazo.com/bab0df2351fc815294e668583147da25/raw" width="400" height="200">
 
 ## 技術要件
 - Swift
