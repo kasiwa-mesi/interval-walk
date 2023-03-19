@@ -47,7 +47,7 @@
 
 この指摘からバイブによる振動だけではなく、**人工音声で切り替えるタイミングを通知するように実装した。**
 
-[![デモ動画](https://gyazo.com/f179c908184a06acf985a15a2c5d14c7/raw)]('https://www.youtube.com/watch?v=kID6gpFhqF0')
+[![](https://gyazo.com/f179c908184a06acf985a15a2c5d14c7/raw)](https://www.youtube.com/watch?v=kID6gpFhqF0)
 
 ## 注意して実装した箇所
 ### ViewControllerにif文を流入させないこと
