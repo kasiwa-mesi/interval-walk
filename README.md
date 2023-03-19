@@ -6,6 +6,7 @@
 - [アプリの内容](https://github.com/kasiwa-mesi/interval-walk#アプリの内容)
 - [開発した経緯](https://github.com/kasiwa-mesi/interval-walk#開発した経緯)
 - [技術要件](https://github.com/kasiwa-mesi/interval-walk#技術要件)
+- [フィードバックを受けて改善したこと](https://github.com/kasiwa-mesi/interval-walk#フィードバックを受けて改善したこと)
 - [注意して実装した箇所](https://github.com/kasiwa-mesi/interval-walk#注意して実装した箇所)
   - [ViewControllerにif文を流入させないこと](https://github.com/kasiwa-mesi/interval-walk#ViewControllerにif文を流入させないこと)
   - [エラーハンドリング](https://github.com/kasiwa-mesi/interval-walk#エラーハンドリング)
@@ -38,6 +39,15 @@
     - ウォーキングを行ったokonatta記録を保存するデータベースとして活用
 - アーキテクチャ
   - MVP(Model - View - Presenter)
+
+## フィードバックを受けて改善したこと
+バイブレーションを使って、「ゆっくり⇄早歩き」に切り替えるタイミングを通知する新機能を追加した。
+
+祖母に意見を聞くと、**「冬場でジャケットのポケットにスマホを入れていると、バイブに気づかない」**というフィードバックをもらった。
+
+この指摘からバイブによる振動だけではなく、**人工音声で切り替えるタイミングを通知するように実装した。**
+
+[!['デモ動画'](https://gyazo.com/f179c908184a06acf985a15a2c5d14c7)]('https://youtu.be/kID6gpFhqF0')
 
 ## 注意して実装した箇所
 ### ViewControllerにif文を流入させないこと
