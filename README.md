@@ -47,7 +47,7 @@
 
 この指摘からバイブによる振動だけではなく、**人工音声で切り替えるタイミングを通知するように実装した。**
 
-※下記画像をクリックするとYoutubeに飛ぶ
+**※下記画像をクリックすると、Youtube(デモ動画)に飛びます。**
 
 [![](https://gyazo.com/f179c908184a06acf985a15a2c5d14c7/raw)](https://www.youtube.com/watch?v=kID6gpFhqF0)
 
