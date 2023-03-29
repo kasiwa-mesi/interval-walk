@@ -20,4 +20,6 @@ extension String {
     static var stopButtonLabel: String { "停止" }
     static var speedyLabel: String { "早歩き" }
     static var slowlyLabel: String { "ゆっくり" }
+    static var localNotificationTitle: String { "インターバル・ウォーキング" }
+    static var localNotificationBody: String { "歩くスピードを切り替えましょう！" }
 }
