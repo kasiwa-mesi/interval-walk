@@ -7,6 +7,7 @@
 
 import Foundation
 import AVFoundation
+import UserNotifications
 
 protocol StopwatchPresenterInput {
     var state: State { get }
@@ -34,6 +35,13 @@ protocol StopwatchPresenterOutput {
 
 
 final class StopwatchPresenter {
+    private var _center = UNUserNotificationCenter.current()
+    var center: UNUserNotificationCenter {
+        get {
+            return _center
+        }
+    }
+    
     private var _state: State
     var state: State {
         get {
@@ -154,7 +162,6 @@ extension StopwatchPresenter: StopwatchPresenterInput {
     
     func setTimerLabelUpdated() {
         let elapsedTime = state.elapsedTime(now: Date())
-        let fixedElapsedTime = floor(Double(elapsedTime))
         
         _hour = Int(elapsedTime) / 3600
         _minute = Int(elapsedTime) / 60
@@ -185,6 +192,7 @@ extension StopwatchPresenter: StopwatchPresenterInput {
                 timer: scheduleTimer()
             )
             _state = .running(runningState)
+            setRepeatLocalNotification()
             
         case let .running(runningState):
             runningState.timer.invalidate()
@@ -193,6 +201,7 @@ extension StopwatchPresenter: StopwatchPresenterInput {
                     elapsedTime: runningState.elapsedTime + Date().timeIntervalSince(runningState.startDate)
                 )
             )
+            resetLocalNotification()
             
         case let .pause(pauseState):
             _state = .running(
@@ -225,5 +234,29 @@ extension StopwatchPresenter: StopwatchPresenterInput {
         case .running:
             break
         }
+    }
+    
+    func setRepeatLocalNotification() {
+        let content: UNMutableNotificationContent = UNMutableNotificationContent()
+        content.title = String.localNotificationTitle
+        content.body = String.localNotificationBody
+        content.sound = .default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 180, repeats: true)
+        let request = UNNotificationRequest(identifier: "repeat", content: content, trigger: trigger)
+        
+        _center.add(request) { (error : Error?) in
+            if let error = error {
+                // TODO: エラーアラートを実装する
+                print(error.localizedDescription)
+                print("通知を失敗")
+            } else {
+                print("通知を成功")
+            }
+        }
+    }
+    
+    func resetLocalNotification() {
+        _center.removePendingNotificationRequests(withIdentifiers: ["repeat", "request"])
     }
 }

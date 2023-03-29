@@ -25,14 +25,14 @@ final class StopwatchViewController: UIViewController {
     
     private var presenter: StopwatchPresenterInput!
     func inject(presenter: StopwatchPresenterInput) {
-      self.presenter = presenter
+        self.presenter = presenter
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         timerLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 50, weight: .bold)
-
+        
         updateStartButton()
     }
     
