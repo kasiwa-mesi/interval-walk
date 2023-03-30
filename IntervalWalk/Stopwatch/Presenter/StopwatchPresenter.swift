@@ -220,9 +220,11 @@ extension StopwatchPresenter: StopwatchPresenterInput {
         case let .running(runningState):
             addRecord()
             runningState.timer.invalidate()
+            resetLocalNotification()
             _state = .idle
         case .pause:
             addRecord()
+            resetLocalNotification()
             _state = .idle
         }
     }
